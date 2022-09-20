@@ -342,10 +342,10 @@ class Computed_Torque_Controller : public controller_interface::Controller<hardw
         // Error velocity in joint space (unit: rad/s)
         SaveData_[37] = e_dot_(0);
         SaveData_[38] = e_dot_(1);
-        SaveData_[39] = e_dot_(3);
-        SaveData_[40] = e_dot_(4);
-        SaveData_[41] = e_dot_(5);
-        SaveData_[42] = e_dot_(6);
+        SaveData_[39] = e_dot_(2);
+        SaveData_[40] = e_dot_(3);
+        SaveData_[41] = e_dot_(4);
+        SaveData_[42] = e_dot_(5);
 
         // Error intergal value in joint space (unit: rad*sec)
         SaveData_[43] = e_int_(0);
