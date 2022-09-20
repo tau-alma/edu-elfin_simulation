@@ -33,7 +33,7 @@ The github repository provided here is the modified version of [4] that some of 
     $ sudo apt-get install ros-noetic-effort-controllers 
 
 ### Add repos and install catkin_tools if not installed yet
-
+```
 $ sudo sh \
     -c 'echo "deb http://packages.ros.org/ros/ubuntu `lsb_release -sc` main" \
         > /etc/apt/sources.list.d/ros-latest.list'
@@ -41,6 +41,7 @@ $ wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 
 $ sudo apt-get update
 $ sudo apt-get install python3-catkin-tools
+```
 
 ### Download, create a workspace and build 
 
