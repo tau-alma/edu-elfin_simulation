@@ -14,11 +14,11 @@ Try to create both examples where joints are default pose (0 rad) and where ther
 You can find corresponding files where you can implement you solution in the src file.
 
 for eigen:
-[Eigen example template](/src/eigen.cpp)
+[Eigen example template](/eigen_kdl_examples/src/eigen.cpp)
 
 
 for KDL:
-[KDL example template](/src/kdl.cpp)
+[KDL example template](/eigen_kdl_examples/src/kdl.cpp)
 
 
 to run these examples run following commands:
@@ -59,5 +59,3 @@ How do they work?
 * How is the current state read from the simulated robot?
 
 * How is the simulated robot commanded?
-
-
