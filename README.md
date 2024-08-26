@@ -50,6 +50,7 @@ $ sudo apt-get install python3-catkin-tools
     $ git clone https://github.com/tau-alma/edu-elfin_simulation.git
     $ cd ~/elfin_ws/
     $ catkin build
+    $ source devel/setup.bash
 
 
 ### Run examples
@@ -95,6 +96,28 @@ $ source devel/setup.bash
       <background>0.25 0.25 0.25 1</background>
       <shadows>false</shadows>
     </scene>
+```
+
+## Docker
+
+There is a docker configuration file that can be used to run the simulation environment and scripts inside of the docker containers
+
+
+To build the docker container use the build script
+```
+./build_docker.sh
+```
+
+and run the images from the root of the repository, this will copy the current version of your scripts to the docker image.
+```
+docker run -it --env="DISPLAY" --env="XAUTHORITY=$XAUTH" --volume="$XAUTH:$XAUTH" --volume="/tmp/.X11-unix:/tmp/.X11-unix" -v .:/root/src --privileged --net=host edu-elfin:latest
+```
+Inside of the docker image to access the environment use following:
+
+```
+cd root
+catkin build
+roslaunch elfin_gazebo elfin3_empty_world.launch controller:=gravity_comp_controller
 ```
 
 
